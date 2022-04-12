@@ -1,7 +1,7 @@
 import re
 
 
-def link_generator(string, data):
+def link_generator(string, data): # Könnte ich später mit php benutzen um vereinfacht die Links zurück zu geben
 
     progress = []
     clean_data = cleaner(data)
