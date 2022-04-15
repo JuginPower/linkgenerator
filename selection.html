@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Selection</title>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            var url_string = window.location.href;
+            var url = new URL(url_string);
+
+            var stringquant = parseInt(url.searchParams.get("squant"));
+            var keyquant = parseInt(url.searchParams.get("kquant"));
+            
+            for (let index = 0; index < stringquant; index++) {
+                var new_company_input = "<label for='company"+index+"'>Company:</label><input type='text' name='company"+index+"' id='company"+index+"'><br>";
+                var new_link_input = "<label for='link"+index+"'>Link:</label><input type='text' name='link"+index+"' id='link"+index+"'><br>";
+                $("#link-form").append(new_company_input, new_link_input);
+
+                for (let index = 0; index < keyquant; index++) {
+                    var new_keyword_input = "<label for='keyword"+index+"'>Keyword: "+index+"</label><input type='text' name='keyword"+index+"' id='keyword"+index+"'><br>";
+                    $("#link-form").append(new_keyword_input);
+                }
+            }
+        })
+    </script>
+    <form action="gateway.php" method="post" id="link-form">
+    </form>
+</body>
+</html>

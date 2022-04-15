@@ -26,7 +26,7 @@ def link_generator(string, data): # Könnte ich später mit php benutzen um vere
                 progress.append(formated_string)
                 print()
 
-    writer(progress)
+    return progress
 
 
 def cleaner(data):
@@ -52,4 +52,9 @@ def writer(links_list):
 
             f.write(link)
             f.write("\n")
-            
+
+test_list = link_generator("https://maschala{0}gibihm.{1}/nachhause", {"erste-keyword": ["lan", "bahn", "tam"], "zweite-keyword": ["en", "de", "net"]})
+
+for item in test_list:
+    print(item)
+    

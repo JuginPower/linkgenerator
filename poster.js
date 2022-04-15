@@ -12,8 +12,8 @@ function postData(url="", data={}, application="application/json") {
     .then(data => {
     console.log('Success:', data);
     })
-    .catch(error => {
+    /* .catch(error => {
         console.log('Error happened here!');
-        console.error(error)
-    })
+        console.error(error);
+    }) */
 }
