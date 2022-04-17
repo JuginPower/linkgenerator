@@ -17,12 +17,12 @@
             var keyquant = parseInt(url.searchParams.get("kquant"));
             
             for (let index = 0; index < stringquant; index++) {
-                var new_company_input = "<label for='company"+index+"'>Company:</label><input type='text' name='company"+index+"' id='company"+index+"'><br>";
-                var new_link_input = "<label for='link"+index+"'>Link:</label><input type='text' name='link"+index+"' id='link"+index+"'><br>";
+                var new_company_input = "<label for='company-"+index+"'>Company:</label><input type='text' name='company-"+index+"' id='company-"+index+"'><br>";
+                var new_link_input = "<label for='link-"+index+"'>Link:</label><input type='text' name='link-"+index+"' id='link-"+index+"'><br>";
                 $(".link-form").append(new_company_input, new_link_input);
 
-                for (let index = 0; index < keyquant; index++) {
-                    var new_keyword_input = "<label for='keyword"+index+"'>Keyword: "+index+"</label><input type='text' name='keyword"+index+"' id='keyword"+index+"'><br>";
+                for (let index2 = 0; index2 < keyquant; index2++) {
+                    var new_keyword_input = "<label for='keyword-"+index+"."+index2+"'>Keyword: "+index+"."+index2+"</label><input type='text' name='keyword-"+index+"."+index2+"' id='keyword-"+index+"."+index2+"'><br>";
                     $(".link-form").append(new_keyword_input);
                 }
             }
