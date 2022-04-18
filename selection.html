@@ -22,14 +22,14 @@
                 $(".link-form").append(new_company_input, new_link_input);
 
                 for (let index2 = 0; index2 < keyquant; index2++) {
-                    var new_keyword_input = "<label for='keyword-"+index+"."+index2+"'>Keyword: "+index+"."+index2+"</label><input type='text' name='keyword-"+index+"."+index2+"' id='keyword-"+index+"."+index2+"'><br>";
+                    var new_keyword_input = "<label for='keyword-"+index+"-"+index2+"'>Keyword: "+index+"-"+index2+"</label><input type='text' name='keyword-"+index+"-"+index2+"' id='keyword-"+index+"-"+index2+"'><br>";
                     $(".link-form").append(new_keyword_input);
                 }
             }
             $(".link-form").append("<input type='submit' value='submit'>");
         })
     </script>
-    <form action="gateway.php" method="post" class="link-form">
+    <form action="result.php" method="post" class="link-form">
     </form>
 </body>
 </html>
