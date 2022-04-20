@@ -26,22 +26,35 @@
 </head>
 
 <body>
+    <?php
+    include "linker.php";
+    $company_name = "";
+    $link = "";
+    $keywords = array();
+
+    foreach ($_POST as $key => $value) {
+
+        if (str_starts_with($key, "company")) {
+            
+            $company_name = $value;
+        }
+        if (str_starts_with($key, "link")) {
+            
+            $link = $value;
+        }
+        if (str_starts_with($key, "keyword")) {
+
+            
+        }
+    }
+    ?>
     <table>
         <tr>
             <th>Company</th>
             <th>Links</th>
         </tr>
         <tr>
-        <?php
-        include "linker.php";
 
-        foreach ($_POST as $key => $value) {
-            
-            if (str_starts_with($key, "company")) {
-                echo "<td>". $value . "</td>";
-            }
-        }
-        ?>
         </tr>
     </table>
 </body>
