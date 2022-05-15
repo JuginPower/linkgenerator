@@ -24,9 +24,8 @@ def link_generator(string, data):
 
                 formated_string = re.sub(key, str(value), string)
                 progress.append(formated_string)
-                print()
 
-    writer(progress)
+    return progress
 
 
 def cleaner(data):
